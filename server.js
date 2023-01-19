@@ -9,8 +9,8 @@ const PORT = process.env.PORT
 //MIDDLEWARE
 
 app.set("views", __dirname + "/views")
-app.set("view engine", "jxs")
-app.engine("jsx", require("express-react-view").createEngine())
+app.set("view engine", "jsx")
+app.engine("jsx", require("express-react-views").createEngine())
 
 
 //Routes
