@@ -6,6 +6,12 @@ const app = express()
 require("dotenv").config()
 const PORT = process.env.PORT
 
+//MIDDLEWARE
+
+app.set("views", __dirname + "/views")
+app.set("view engine", "jxs")
+app.engine("jsx", require("express-react-view").createEngine())
+
 
 //Routes
 app.get("/", (req, res) => {
