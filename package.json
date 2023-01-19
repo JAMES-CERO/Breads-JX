@@ -7,9 +7,17 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JAMES-CERO/Breads-JX.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JAMES-CERO/Breads-JX/issues"
+  },
+  "homepage": "https://github.com/JAMES-CERO/Breads-JX#readme",
   "dependencies": {
     "dotenv": "^16.0.3",
     "express": "^4.18.2"
