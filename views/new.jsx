@@ -8,16 +8,16 @@ function New () {
         <form action='/breads' method='POST'>
           <label htmlFor="name">Name</label>
           <input
+          className='uppercase'
             type="text"
             name="name"
             id="name"
             required
           />
           <label htmlFor="image">Image</label>
-          <input
-            type="text"
-            name="image"
-            id="image"/>
+          <input type="url" id="website" name="image"
+  pattern="https?://.+" title="Include http://"></input>
+
           <label htmlFor="hasGluten">Has Gluten?</label>
           <input
             type="checkbox"
@@ -26,7 +26,7 @@ function New () {
             defaultChecked
           />
           <br />
-          <input type="submit"/>
+          <input className='submit-button' type="submit"/>
         </form>
       </Default>
     )

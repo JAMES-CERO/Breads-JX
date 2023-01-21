@@ -8,7 +8,7 @@ function Show ({bread}) {
     return (
         <Default>
             <h2> Show Page </h2>
-            <h3>{bread.name}</h3>
+            <h3 className="showPage">{bread.name}</h3>
 
             <p>
                 and it 

@@ -1,5 +1,5 @@
 body{
-    background-color: floralwhite;
+    background-color: rgb(248, 238, 218);
 }
 
 img{
@@ -7,3 +7,10 @@ img{
     display: block;
     margin: auto;
 }
+button,
+.submit-button{
+    /* background: radial-gradient(#e66465, #9198e5); */
+    background: radial-gradient(circle at 100%, #a13d63, 50%, #f18ca5);
+}
+input.uppercase,
+.showPage{  text-transform: uppercase;  }
