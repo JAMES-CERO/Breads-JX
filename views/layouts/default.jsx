@@ -8,6 +8,13 @@ function Default(html) {
             </head>
             <body>
                 <h1>HTML Rendered!</h1>
+                <div className="wrapper">
+                    <header>
+                        <h1>
+                            <a href="/breads" >BreadCRUD</a>
+                        </h1>
+                    </header>
+                </div>
                 <div className="container" >
                     {html.children}
                 </div>

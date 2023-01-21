@@ -15,7 +15,7 @@ app.engine("jsx", require("express-react-views").createEngine())
 
 //Routes
 app.get("/", (req, res) => {
-    res.send("<h1>I WANT CONCHA</h1>")
+    res.send("<h1>Hello world</h1>")
 })
 
 //Breads
