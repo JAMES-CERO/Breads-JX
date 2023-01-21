@@ -6,17 +6,23 @@ function New () {
       <Default>
         <h2>Add a new bread</h2>
         <form action='/breads' method='POST'>
+
           <label htmlFor="name">Name</label>
+          {/* classname uppercase */}
           <input
-          className='uppercase'
-            type="text"
-            name="name"
-            id="name"
-            required
+                className='uppercase'
+                type="text"
+                name="name"
+                id="name"
+                required
           />
           <label htmlFor="image">Image</label>
-          <input type="url" id="website" name="image"
-  pattern="https?://.+" title="Include http://"></input>
+          <input type="url"
+                 id="website" 
+                 name="image"
+                 pattern="https?://.+"
+                 title="Include http://"
+                 placeholder='URL'/>
 
           <label htmlFor="hasGluten">Has Gluten?</label>
           <input

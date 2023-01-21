@@ -11,7 +11,7 @@ function Show ({bread}) {
             <h3 className="showPage">{bread.name}</h3>
 
             <p>
-                and it 
+                It 
                 {
                     bread.hasGluten
                     ? <span> does </span>
