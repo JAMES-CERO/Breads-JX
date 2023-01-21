@@ -26,7 +26,7 @@ app.use("/breads", breadsController)
 //404 page
 
 app.get("*", (req, res) => {
-    res.send("404 I'm sorry this page have not be Found! ")
+    res.send("404")
 })
 
 
