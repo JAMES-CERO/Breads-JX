@@ -18,3 +18,9 @@ input.uppercase,
 input{
     color: black;
 }
+.wrapper{
+    display: grid;
+}
+header{
+    place-self: center;
+}
