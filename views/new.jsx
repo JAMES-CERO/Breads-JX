@@ -16,6 +16,14 @@ function New () {
                 id="name"
                 required
           />
+          <label htmlFor="ingredients">INGREDIENTS</label>
+          <input className='uppercase'
+                type="text"
+                name="ingredients"
+                id="ingredients"
+                required
+                />
+
           <label htmlFor="image">Image</label>
           <input type="url"
                  id="website" 

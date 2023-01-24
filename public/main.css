@@ -8,7 +8,8 @@ img{
     margin: auto;
 }
 button,
-.submit-button{
+.submit-button,
+input{
     /* background: radial-gradient(#e66465, #9198e5); */
     background: radial-gradient(circle at 100%, #a13d63, 50%, #f18ca5);
 }
