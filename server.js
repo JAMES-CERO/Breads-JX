@@ -24,7 +24,8 @@ app.get("/", (req, res) => {
 
 //Breads
 const breadsController = require("./controllers/breads_controller")
-app.use("/breads", breadsController)
+app.use("/breads", breadsController) 
+// this gives the bread the path /breads
 
 //404 page
 
