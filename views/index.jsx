@@ -12,7 +12,7 @@ function Index ({breads, title}) {
                         return (
                           <li key={index}>
                             {/* classname for uppercase */}
-                              <a className="showPage" href={`/breads/${index}`}>
+                              <a className="showPage" href={`/breads/${bread.id}`}>
                                   {bread.name}
                               </a>
                           </li>
