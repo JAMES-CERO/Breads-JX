@@ -2,10 +2,19 @@
 const express = require("express")
 const app = express()
 const methodOverride = require('method-override')
+const mongoose = require("mongoose")
+
 
 //Conf
 require("dotenv").config()
 const PORT = process.env.PORT
+
+
+mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true}, 
+    () => { console.log('connected to mango: ', process.env.MONGO_URI) }
+  )
+  
+
 
 //MIDDLEWARE
 
@@ -19,6 +28,7 @@ app.use(methodOverride('_method'))
 
 
 //Routes
+
 app.get("/", (req, res) => {
     res.send("<h1>Hello world</h1>")
 })
