@@ -8,7 +8,7 @@ const Bread = require("../models/bread.js")
 breads.get('/', (req, res) => {
   Bread.find()
       .then(foundBreads => {
-        console.log(foundBreads)
+        // console.log(foundBreads)
           res.render('index', {
               breads: foundBreads,
               title: 'Index Page'
@@ -67,6 +67,8 @@ breads.post("/", (req, res) => {
   }
   Bread.create(req.body)
   res.redirect("/breads")
+
+  // Bread.create(req.body).then(() => res.redirect("/breads")).catch(res.send("You are a Fool"));
 })
 
 
