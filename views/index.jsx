@@ -4,7 +4,8 @@ const Default = require("./layouts/Default")
 function Index ({breads, title}) {
     return (
         <Default title= {title}>
-            <h2>Index Page!</h2>
+            <h6>Index Page</h6>
+            <h2>Ours Delicious Breads!</h2>
             {/* <p>I have {breads[0].name} bread!</p> */}
             <ul>
                 {
@@ -15,7 +16,9 @@ function Index ({breads, title}) {
                               <a className="showPage" href={`/breads/${bread.id}`}>
                                   {bread.name}
                               </a>
+                              <li> {bread.getBakedBy()}</li>
                           </li>
+                          
                         )
                     })
                 }

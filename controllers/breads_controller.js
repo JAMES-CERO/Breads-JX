@@ -41,6 +41,8 @@ breads.get('/:id/edit', (req, res) => {
 breads.get('/:id', (req, res) => {
   Bread.findById(req.params.id)
       .then(foundBread => {
+        const bakedBy = foundBread.getBakedBy()
+        console.log(bakedBy)
           res.render('show', {
               bread: foundBread
           })
@@ -55,7 +57,7 @@ breads.get('/:id', (req, res) => {
 
 //CREATE
 
-breads.post("/", (req, res) => {
+breads.post("/", async (req, res) => {
 
   if (!req.body.image) {
     req.body.image = undefined
@@ -65,7 +67,7 @@ breads.post("/", (req, res) => {
   } else {
     req.body.hasGluten = false
   }
-  Bread.create(req.body)
+  await Bread.create(req.body)
   res.redirect("/breads")
 
   // Bread.create(req.body).then(() => res.redirect("/breads")).catch(res.send("You are a Fool"));
