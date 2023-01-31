@@ -7,13 +7,13 @@ const Bread = require("../models/bread.js")
 //INDEX
 breads.get('/', (req, res) => {
   Bread.find()
-      .then(foundBreads => {
-        // console.log(foundBreads)
-          res.render('index', {
-              breads: foundBreads,
-              title: 'Index Page'
-          })
+    .then(foundBreads => {
+      // console.log(foundBreads)
+      res.render('index', {
+        breads: foundBreads,
+        title: 'Index Page'
       })
+    })
 })
 
 
@@ -27,10 +27,10 @@ breads.get("/new", (req, res) => {
 //EDIT
 
 breads.get('/:id/edit', (req, res) => {
-  Bread.findById(req.params.id) 
-    .then(foundBread => { 
+  Bread.findById(req.params.id)
+    .then(foundBread => {
       res.render('edit', {
-        bread: foundBread 
+        bread: foundBread
       })
     })
 })
@@ -40,16 +40,16 @@ breads.get('/:id/edit', (req, res) => {
 //get
 breads.get('/:id', (req, res) => {
   Bread.findById(req.params.id)
-      .then(foundBread => {
-        const bakedBy = foundBread.getBakedBy()
-        console.log(bakedBy)
-          res.render('show', {
-              bread: foundBread
-          })
+    .then(foundBread => {
+      const bakedBy = foundBread.getBakedBy()
+      console.log(bakedBy)
+      res.render('show', {
+        bread: foundBread
       })
-      .catch( err => {
-        res.send(" Sorry we cound find the page - Error 404")
-      })
+    })
+    .catch(err => {
+      res.send(" Sorry we cound find the page - Error 404")
+    })
 })
 
 
@@ -76,25 +76,25 @@ breads.post("/", async (req, res) => {
 
 // DELETE
 breads.delete('/:id', async (req, res) => {
-   await Bread.findByIdAndDelete(req.params.id)
-    res.status(303).redirect('/breads')
-    
-  })
-  
+  await Bread.findByIdAndDelete(req.params.id)
+  res.status(303).redirect('/breads')
+
+})
+
 
 
 // UPDATE
 breads.put('/:id', (req, res) => {
-  if(req.body.hasGluten === 'on'){
+  if (req.body.hasGluten === 'on') {
     req.body.hasGluten = true
   } else {
     req.body.hasGluten = false
   }
-  Bread.findByIdAndUpdate(req.params.id, req.body, { new: true})
-  .then(updatedBread => {
-    console.log(updatedBread)
-    res.redirect(`/breads/${req.params.id}`)
-  })
+  Bread.findByIdAndUpdate(req.params.id, req.body, { new: true })
+    .then(updatedBread => {
+      console.log(updatedBread)
+      res.redirect(`/breads/${req.params.id}`)
+    })
 })
 
 

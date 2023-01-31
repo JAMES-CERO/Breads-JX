@@ -1,7 +1,7 @@
 // require mongoose 
 const mongoose = require('mongoose')
 // creating shorthand for the Schema constructor 
-const { Schema } = mongoose 
+const { Schema } = mongoose
 
 // schema
 const breadSchema = new Schema({
@@ -15,7 +15,7 @@ const breadSchema = new Schema({
 })
 
 breadSchema.methods.getBakedBy = function () {
-  return `${this.name} was baked with love by ${this.baker}`
+    return `${this.name} was baked with love by ${this.baker}`
 }
 
 // model and export 

@@ -4,7 +4,9 @@ const Default = require("./layouts/Default")
 function Edit({ bread }) {
     return (
         <Default>
-            <h2>Edit a Bread! </h2>
+            <div className="titles">
+                <h2>Edit a Bread! </h2>
+            </div>
             <form action={`/breads/${bread.id}?_method=PUT`} method="POST">
 
                 <label htmlFor="name">Name</label>
