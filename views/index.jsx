@@ -7,6 +7,7 @@ function Index ({breads, title}) {
             <div className="titles">
                 <h2>Ours Delicious Breads!</h2>
             </div>
+            <div className="index-div">
             <ul>
                 {
                     breads.map((bread, index) => {
@@ -25,7 +26,8 @@ function Index ({breads, title}) {
 
             </ul>
             <div>
-                <img src="https://o.remove.bg/downloads/3ec82f17-fa86-436b-8a63-09d5faf2dcd7/Screen_Shot_2023-01-30_at_10.39.54_PM-removebg-preview.png" alt="welcome logo"/>
+            <img className="welcome-img" src="https://o.remove.bg/downloads/f9c2b0de-e0f9-4d2b-8f79-fb75c7348102/welcomebg-removebg-preview.png" alt="welcome logo"/>
+            </div>
             </div>
             <div className="newButton">
                   <a href="/breads/new">

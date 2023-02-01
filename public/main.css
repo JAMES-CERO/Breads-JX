@@ -37,3 +37,12 @@ header{
 h2{
     background-color: #f18ca5;
 }
+.index-div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.welcome-img{
+    width: 500px;
+    height: auto;
+}
