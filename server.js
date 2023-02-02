@@ -28,7 +28,6 @@ app.use(methodOverride('_method'))
 
 
 //Routes
-
 app.get("/", (req, res) => {
     res.send("<h1>Hello world</h1>")
 })
@@ -38,8 +37,11 @@ const breadsController = require("./controllers/breads_controller")
 app.use("/breads", breadsController) 
 // this gives the bread the path /breads
 
-//404 page
+//Bakers
+const bakersControlller = require("./controllers/bakers_controller")
+app.use("/bakers", bakersControlller)
 
+//404 page
 app.get("*", (req, res) => {
     res.send("404")
 })

@@ -2,10 +2,11 @@
 const mongoose = require('mongoose')
 const { Schema } = mongoose
 
+
 // schema
-const bakerSchema = new Schema({
+const bakerSchema = new Schema ({
     name: {
-        String,
+        type: String,
         required: true,
         enum: ['Rachel', 'Monica', 'Joey', 'Chandler', 'Ross', 'Phoebe']
     },
@@ -15,7 +16,6 @@ const bakerSchema = new Schema({
     },
     bio: String
 })
-
 // model and export
 const Baker = mongoose.model('Baker', bakerSchema)
 module.exports = Baker
