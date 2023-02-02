@@ -1,10 +1,13 @@
 // dependencies
-const express = require('express')
+
+const express = require("express")
 const baker = express.Router()
 const Baker = require('../models/baker.js')
-const bakerSeedData = require('../models/baker_seed.js')
+const bakerSeedData = require('../models/baker_seed')
+
+
               
-baker.get('/data/seed', (req, res) => {
+baker.get('/data/seed',(req, res) => {
     Baker.insertMany(bakerSeedData)
         .then(res.redirect('/breads'))
 })
@@ -12,4 +15,5 @@ baker.get('/data/seed', (req, res) => {
 
 
 
-module.exports = baker
+
+module.exports = baker 

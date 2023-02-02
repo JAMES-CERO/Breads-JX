@@ -33,12 +33,12 @@ app.get("/", (req, res) => {
 })
 
 //Breads
-const breadsController = require("./controllers/breads_controller")
+const breadsController = require("./controllers/breads_controller.js")
 app.use("/breads", breadsController) 
 // this gives the bread the path /breads
 
 //Bakers
-const bakersControlller = require("./controllers/bakers_controller")
+const bakersControlller = require("./controllers/bakers_controller.js")
 app.use("/bakers", bakersControlller)
 
 //404 page

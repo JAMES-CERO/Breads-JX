@@ -1,5 +1,6 @@
 const React = require("react")
 const Default = require("./layouts/Default")
+// const bread = require("../models/bread.js")
 
 function Index ({breads, title}) {
     return (
@@ -13,11 +14,10 @@ function Index ({breads, title}) {
                     breads.map((bread, index) => {
                         return (
                           <li key={index}>
-                            {/* classname for uppercase */}
                               <a className="showPage" href={`/breads/${bread.id}`}>
                                   {bread.name}
                               </a>
-                              <ul> {bread.getBakedBy()}</ul>
+                              {/* <ul> {bread.getBakedBy()}</ul> */}
                           </li>
                           
                         )
