@@ -16,12 +16,12 @@ const bakerSchema = new Schema({
         required: true
     },
     bio: {type: String}
-})
+} , {toJSON: { virtuals: true }})
 
 bakerSchema.virtual("breads",{
     ref: "Bread",
     localField:  "_id"  ,
-    foreignField: "b aker"
+    foreignField: "baker"
 })
 
 // model and export
