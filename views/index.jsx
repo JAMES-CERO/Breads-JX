@@ -26,7 +26,7 @@ function Index({ breads, bakers, title }) {
 
                 </ul>
                 <div>
-                    <img className="welcome-img" src="https://o.remove.bg/downloads/f9c2b0de-e0f9-4d2b-8f79-fb75c7348102/welcomebg-removebg-preview.png" alt="welcome logo" />
+                    {/* <img className="welcome-img" src="https://o.remove.bg/downloads/f9c2b0de-e0f9-4d2b-8f79-fb75c7348102/welcomebg-removebg-preview.png" alt="welcome logo" /> */}
                 </div>
             </div>
             <div className="Bakers">
