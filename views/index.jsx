@@ -11,10 +11,10 @@ function Index({ breads, bakers, title }) {
             <div className="index-div">
                 <ul>
                     {
-                        breads.map((bread, index) => {
+                        breads.map((bread) => {
                             return (
-                                <li key={index}>
-                                    <a className="showPage" href={`/breads/${bread.id}`}>
+                                <li key={bread._id}>
+                                    <a className="showPage" href={`/breads/${bread._id}`}>
                                         {bread.name}
                                     </a>
                                     {/* <ul> {bread.getBakedBy()}</ul> */}
@@ -35,8 +35,8 @@ function Index({ breads, bakers, title }) {
                     {
                         bakers.map((baker) => {
                             return (
-                                <li key={baker.id}>
-                                    <a href={`/bakers/${baker.id}`}>{baker.name}</a>
+                                <li key={baker._id}>
+                                    <a href={`/bakers/${baker._id}`}>{baker.name}</a>
                                 </li>
                             )
                         })
