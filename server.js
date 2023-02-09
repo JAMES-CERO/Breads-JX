@@ -51,3 +51,5 @@ app.get("*", (req, res) => {
 app.listen(PORT, () => {
     console.log("I am Awake", PORT)
 })
+
+module.exports = app;
