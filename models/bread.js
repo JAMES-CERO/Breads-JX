@@ -14,13 +14,18 @@ const breadSchema = new Schema({
         ref: "Baker"
     }
 })
+breadSchema.virtual("bakers",{
+    ref: "Baker",
+    localField:  "id"  ,
+    foreignField: "breads"
+})
+
 
 // helper methods 
 // helper methods 
 breadSchema.methods.getBakedBy = function(){
     return `${this.name} was baked with love by ${this.baker.name}, who has been with us since ${this.baker.startDate.getFullYear()}`
   }
-  
   
 
 // model and export 
